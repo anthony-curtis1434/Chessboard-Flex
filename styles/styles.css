@@ -1,0 +1,194 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 16px;
+  background-image: linear-gradient(rgba(83, 71, 191, 0.603), transparent);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 110vh;
+}
+
+.board {
+  width: 100%;
+  height: 100vw;
+  background-image: url(/assets/wood3.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-top: 50px;
+  max-width: 500px;
+  max-height: 500px;
+  border: 10px solid;
+  -o-border-image: url("/assets/wood3.jpg");
+     border-image: url("/assets/wood3.jpg");
+  box-shadow: 0px 5px 10px 1px;
+}
+
+.box {
+  width: 12.5%;
+  height: 12.5%;
+  font-size: 3rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.board .box:nth-child(n+17) {
+  color: rgba(255, 255, 255, 0.774);
+}
+
+.board .box:nth-child(2), .board .box:nth-child(4),
+.board .box:nth-child(6), .board .box:nth-child(8),
+.board .box:nth-child(9), .board .box:nth-child(11),
+.board .box:nth-child(13), .board .box:nth-child(15),
+.board .box:nth-child(18), .board .box:nth-child(20),
+.board .box:nth-child(22), .board .box:nth-child(24),
+.board .box:nth-child(25), .board .box:nth-child(27),
+.board .box:nth-child(29), .board .box:nth-child(31),
+.board .box:nth-child(34), .board .box:nth-child(36),
+.board .box:nth-child(38), .board .box:nth-child(40),
+.board .box:nth-child(41), .board .box:nth-child(43),
+.board .box:nth-child(45), .board .box:nth-child(47),
+.board .box:nth-child(50), .board .box:nth-child(52),
+.board .box:nth-child(54), .board .box:nth-child(56),
+.board .box:nth-child(57), .board .box:nth-child(59),
+.board .box:nth-child(61), .board .box:nth-child(63) {
+  background-color: rgba(8, 72, 7, 0.593);
+}
+
+@media screen and (max-width: 425px) {
+  .board {
+    border: 10px solid transparent;
+    -o-border-image: url("/assets/wood3.jpg");
+       border-image: url("/assets/wood3.jpg");
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .box {
+    font-size: 2rem;
+  }
+}
+@media screen and (max-width: 375px) {
+  .board {
+    border: 10px solid transparent;
+    -o-border-image: url("/assets/wood3.jpg");
+       border-image: url("/assets/wood3.jpg");
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .box {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 350px) {
+  .board {
+    border: 10px solid transparent;
+    -o-border-image: url("/assets/wood3.jpg");
+       border-image: url("/assets/wood3.jpg");
+    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .box {
+    font-size: 1.6rem;
+  }
+}
+.pawn {
+  -webkit-animation: top 1s ease-in-out forwards;
+          animation: top 1s ease-in-out forwards;
+}
+
+.pawnb1 {
+  -webkit-animation: bottom1 1s ease-in-out forwards 2s;
+          animation: bottom1 1s ease-in-out forwards 2s;
+}
+
+.bishop {
+  -webkit-animation: top-left 1s ease-in-out forwards 3s;
+          animation: top-left 1s ease-in-out forwards 3s;
+}
+
+.pawnb2 {
+  -webkit-animation: bottom2 1s ease-in-out forwards 4s;
+          animation: bottom2 1s ease-in-out forwards 4s;
+}
+
+.queen {
+  -webkit-animation: top-right 1s ease-in-out forwards 5s;
+          animation: top-right 1s ease-in-out forwards 5s;
+}
+
+.pawnb3 {
+  -webkit-animation: bottom3 1s ease-in-out forwards 6s;
+          animation: bottom3 1s ease-in-out forwards 6s;
+}
+
+@-webkit-keyframes top {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes top {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes bottom1 {
+  100% {
+    transform: translateY(200%);
+  }
+}
+@keyframes bottom1 {
+  100% {
+    transform: translateY(200%);
+  }
+}
+@-webkit-keyframes top-left {
+  100% {
+    transform: translateX(-375%) translateY(-300%);
+  }
+}
+@keyframes top-left {
+  100% {
+    transform: translateX(-375%) translateY(-300%);
+  }
+}
+@-webkit-keyframes bottom2 {
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes bottom2 {
+  100% {
+    transform: translateY(100%);
+  }
+}
+@-webkit-keyframes top-right {
+  0% {
+    transform: translateX(0%) translateY(0%);
+  }
+  100% {
+    transform: translateX(250%) translateY(-200%);
+  }
+}
+@keyframes top-right {
+  0% {
+    transform: translateX(0%) translateY(0%);
+  }
+  100% {
+    transform: translateX(250%) translateY(-200%);
+  }
+}
+@-webkit-keyframes bottom3 {
+  100% {
+    transform: translateY(200%);
+  }
+}
+@keyframes bottom3 {
+  100% {
+    transform: translateY(200%);
+  }
+}
+/*queen moves again for checkmate*//*# sourceMappingURL=styles.css.map */
