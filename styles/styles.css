@@ -15,7 +15,7 @@ body {
 .board {
   width: 100%;
   height: 100vw;
-  background-image: url(/assets/wood3.jpg);
+  background-image: url(../assets/wood3.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -25,8 +25,8 @@ body {
   max-width: 500px;
   max-height: 500px;
   border: 10px solid;
-  -o-border-image: url("/assets/wood3.jpg");
-     border-image: url("/assets/wood3.jpg");
+  -o-border-image: url("../assets/wood3.jpg");
+     border-image: url("../assets/wood3.jpg");
   box-shadow: 0px 5px 10px 1px;
 }
 
@@ -75,8 +75,8 @@ body {
 @media screen and (max-width: 375px) {
   .board {
     border: 10px solid transparent;
-    -o-border-image: url("/assets/wood3.jpg");
-       border-image: url("/assets/wood3.jpg");
+    -o-border-image: url("../assets/wood3.jpg");
+       border-image: url("../assets/wood3.jpg");
     box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.75);
   }
   .box {
@@ -86,8 +86,8 @@ body {
 @media screen and (max-width: 350px) {
   .board {
     border: 10px solid transparent;
-    -o-border-image: url("/assets/wood3.jpg");
-       border-image: url("/assets/wood3.jpg");
+    -o-border-image: url("../assets/wood3.jpg");
+       border-image: url("../assets/wood3.jpg");
     box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.75);
   }
   .box {
